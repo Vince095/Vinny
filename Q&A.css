@@ -389,7 +389,10 @@
 .zmdi{
   cursor: pointer;
 }
-
+a {
+   text-decoration:none;
+   color:none;
+} 
 * {
   cursor: auto;
   user-select: none;
