@@ -55,6 +55,14 @@ $(function() {
         }
         return array[randIndex];
     }
+    function info(){
+	Swal.fire({
+  icon: 'info',
+  title: 'Vinny is a personal virtual assistant',
+  text: 'Made By - Vincent Thejane',
+  footer: '<a href="https://vince095.github.io">PORTFOLIO</a>'
+})
+    }
     var humourAns = ["WHAT DID THE SPIDER DO ON THE COMPUTER?... MADE A WEBSITE!",
     "WHAT DID THE COMPUTER DO AT LUNCHTIME? .... HAD A BYTE!",
     "WHY WAS THE COMPUTER COLD? .... IT LEFT IT'S WINDOWS OPEN!",
