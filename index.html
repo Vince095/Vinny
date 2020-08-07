@@ -28,10 +28,10 @@
               </div>
               
 			  <div class="actions more">
-                <i class="zmdi zmdi-more-vert"></i>
+                <i class="zmdi zmdi-more-vert" onclick = "error()" ></i>
               </div>
               <div class="actions attachment">
-                <i class="zmdi zmdi-attachment-alt"></i>
+                <i class="zmdi zmdi-attachment-alt"onclick = "error()" ></i>
              </div>
               <div  class="actions">
                 <i class="zmdi zmdi-phone"></i>
@@ -68,6 +68,11 @@
 function info(){
         Swal.fire({
  		 icon: 'info',                                                              title: 'Vinny is a personal virtual assistant with voice synthesis',        text: 'Made By - Vincent Thejane',                                         footer: '<a href="https://vince095.github.io" style="text-decoration:none">PORTFOLIO</a>'             })                                                                             }
+	function error(){
+        Swal.fire({
+                 icon: 'error',
+                 title: 'Sorry this is still under development'
+	})                                                                             }
 	</script>
 </body>
 </html>
