@@ -5,7 +5,8 @@ $(function() {
     $("#msend").trigger("click");
     return false;
     });
-    var k="";
+	
+     var k="";
      var d = new Date();
      var h = d.getHours(); 
      var t = d.getMinutes();
@@ -14,7 +15,9 @@ $(function() {
      10>t?t="0"+t:t=t;
      12>h?time=h+":"+t+" am":time=(h-12)+":"+t+" pm";
      $(".status").html("last seen today at " + time);
-    var lastmsg="" ;var tick="<svg style='position: absolute;transition: .5s ease-in-out;' xmlns='http://www.w3.org/2000/svg' width='16'height='15' id='msg-dblcheck-ack' x='2063' y='2076'><path d='M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z' fill='#4fc3f7'/></svg>";
+	
+    var lastmsg="" ;
+    var tick="<svg style='position: absolute;transition: .5s ease-in-out;' xmlns='http://www.w3.org/2000/svg' width='16'height='15' id='msg-dblcheck-ack' x='2063' y='2076'><path d='M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z' fill='#4fc3f7'/></svg>";
     $(".tick").html(tick);
     $(".emoji").html("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' id='smiley' x='3147' y='3209'><path fill-rule='evenodd' clip-rule='evenodd' d='M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z' fill='#7d8489'/></svg>");
     $("#msend").click(function(){
@@ -135,7 +138,7 @@ $(function() {
      function isInArray(x, y) { return x.indexOf(y) > -1; }
 
     isInArray(hello, lastmsg)==true?(smsg="Hello "+"<?php $login = Session::get('login');if ($login == true) {?> <span style='float: right;color: #888;'> <strong><?php echo Session::get('name') ; ?></strong></span> <?php}?>"+", How are you? 😊", k="Hello ,How are you? "):
-	isInArray(info, lastmsg)==true?(smsg="We are a community of young software developers, scientists and designers dedicated to honing our craft. The primary goal is to bring together a group of remarkable people to start ground breaking contribution in the world of computer science.", k=smsg):
+	isInArray(info, lastmsg)==true?(smsg="I am a driven software software engineer dedicated to honing my craft. My primary goal is to create sustanable software solution to solve our everyday problems.", k=smsg):
     isInArray(wru, lastmsg)==true?(smsg="I am Vinny created to assist you", k=smsg):
     isInArray(bad, lastmsg)==true?(smsg="Thanks for your precious feedback, I'll try to improve that.😇", k=smsg):
     isInArray(wrud, lastmsg)==true?(k="Nothing special and you? ", smsg=k+"☺️"):
